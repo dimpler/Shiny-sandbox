@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Explore diamond data</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Explore diamond data">
+  <meta name="author" content="Sergey Legotsky">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Explore diamond data</h1>
+    <h2>Some features of shiny app</h2>
+    <p>Sergey Legotsky<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Application and its functionality</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>Application itself is accessible <a href="https://dimpler.shinyapps.io/diamonds-plotting">here</a></p></li>
+<li><p>This app was created to visualize diamond datset (details will be provided later)</p></li>
+<li><p>This application was inspired by wonderful graphing system &#39;ggplot2&#39; which is included in R and wonderful manual <a href="http://www.bioinformaticslaboratory.nl/twikidata/pub/Education/ComputinginR/ggplot2-book.pdf">ggplot2: elegant graphics for data analysis (12 526 KB).</a></p></li>
+<li><p>ggplot2 library is available from CRAN, thus it can be installed and loaded by executing following code:</p></li>
+</ol>
+
+<pre><code class="r">install.packages(&quot;ggplot2&quot;)
+library(ggplot2)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Loading Diamond data set</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>Diamond dataset is included in ggplot2 library</p></li>
+<li><p>Thus, it can be loaded in R in the following way:</p></li>
+</ol>
+
+<pre><code class="r">#load dataset
+library(ggplot2)
+data(diamonds)
+#some features of data
+dim(diamonds)
+</code></pre>
+
+<pre><code>## [1] 53940    10
+</code></pre>
+
+<pre><code class="r">names(diamonds)
+</code></pre>
+
+<pre><code>##  [1] &quot;carat&quot;   &quot;cut&quot;     &quot;color&quot;   &quot;clarity&quot; &quot;depth&quot;   &quot;table&quot;   &quot;price&quot;  
+##  [8] &quot;x&quot;       &quot;y&quot;       &quot;z&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Diamonds dataset summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>As you can see from previous slide, this dataset provides prices and some other parameters of more than 50,000 diamonds. Detailed description is <a href="http://www.inside-r.org/packages/cran/ggplot2/docs/diamonds">here</a>, optionally you can get it by typing following code in R console:</li>
+</ul>
+
+<pre><code class="r">?diamonds
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Functionality of Shiny App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="https://dimpler.shinyapps.io/diamonds-plotting">My shinyapp</a> allows to visualize 2D scatter plot of any vatiable vs any other variable. The following actions are supported:</p>
+
+<ul>
+<li>slider for the size of subdataset;</li>
+<li>X/Y variable choice;</li>
+<li>Color dots on the plot depending on value of any other variable;</li>
+<li>faceting of plot by any categorical variable;</li>
+<li>jittering</li>
+<li>smoothing (unfortunately smoothing doesn&#39;t work online but it works locally as expected. Now this feature is under discuttion with Shiny support team).</li>
+</ul>
+
+<p>Explore the diamonds! ;)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Application and its functionality'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Loading Diamond data set'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Diamonds dataset summary'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Functionality of Shiny App'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
